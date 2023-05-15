@@ -8,6 +8,7 @@ n = int(input())
 for k in range(1, n+1):
   if k % 3 == 0: print(-k, end=" ")
   else: print(k, end = " ")  
+print()
 
 # Questão 4
 def ultimo_dia_mes(mes, ano): 
