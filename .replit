@@ -1,4 +1,4 @@
-run = "python3 './Aula_0522/Ex01.py'"
+run = "python3 './Aula_0522/Ex02.py'"
 
 # The primary language of the repl. There can be others, though!
 language = "python3"
