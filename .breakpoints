@@ -1,3 +1,18 @@
 {
-  "files": {}
+  "files": {
+    "Aula_0612/Ex01.py": [
+      {
+        "id": "6276fcd2-156c-40d0-91a5-80f891f27d44",
+        "line": 7,
+        "version": 399,
+        "index": 68
+      },
+      {
+        "id": "fee961d2-3407-40e5-80a9-ffb5526b433a",
+        "line": 8,
+        "version": 399,
+        "index": 77
+      }
+    ]
+  }
 }
