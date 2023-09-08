@@ -37,11 +37,11 @@ print(b.__dict__["nome"])
 x = [a, b]
 print(x)
 
-#with open("clientes.json", "w") as f1:
-#  json.dump(x, f1, default=vars)
+with open("clientes2.json", "w") as f1:
+  json.dump(x, f1, default=vars)
 
 clientes = []
-with open("clientes.json", "r") as f2:
+with open("clientes2.json", "r") as f2:
   clientes_json = json.load(f2)  # lista de dicts
   for obj in clientes_json:
     print(obj)
