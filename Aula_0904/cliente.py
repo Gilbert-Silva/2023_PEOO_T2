@@ -1,6 +1,5 @@
 import json
 
-
 class Cliente:
 
   def __init__(self, id, nome, email, fone):
