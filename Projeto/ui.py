@@ -45,14 +45,14 @@ class UI:
     nome = input("Nome: ")
     email = input("E-mail: ")
     fone = input("fone: ")
-    views.cliente_inserir(nome, email, fone)
+    views.Views.cliente_inserir(nome, email, fone)
     #cliente = Cliente(0, nome, email, fone)
     #NCliente.inserir(cliente)
 
   @classmethod
   def Cliente_Listar(cls):
     #for cliente in NCliente.listar():
-    for cliente in views.cliente_listar():
+    for cliente in views.Views.cliente_listar():
       print(cliente)
 
   @classmethod

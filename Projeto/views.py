@@ -1,8 +1,13 @@
 from cliente import Cliente, NCliente
 
-def cliente_inserir(nome, email, fone):
-  cliente = Cliente(0, nome, email, fone)
-  NCliente.inserir(cliente)
 
-def cliente_listar():
-  return NCliente.listar()
+class Views:
+
+  @classmethod
+  def cliente_inserir(cls, nome, email, fone):
+    cliente = Cliente(0, nome, email, fone)
+    NCliente.inserir(cliente)
+
+  @classmethod
+  def cliente_listar(cls):
+    return NCliente.listar()
