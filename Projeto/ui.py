@@ -1,7 +1,7 @@
 #from cliente import Cliente, NCliente
 #from servico import Servico, NServico
 #from agenda import Agenda, NAgenda
-import views
+from views import Views
 import datetime
 
 class UI:
@@ -45,14 +45,14 @@ class UI:
     nome = input("Nome: ")
     email = input("E-mail: ")
     fone = input("fone: ")
-    views.Views.cliente_inserir(nome, email, fone)
+    Views.cliente_inserir(nome, email, fone)
     #cliente = Cliente(0, nome, email, fone)
     #NCliente.inserir(cliente)
 
   @classmethod
   def Cliente_Listar(cls):
     #for cliente in NCliente.listar():
-    for cliente in views.Views.cliente_listar():
+    for cliente in Views.cliente_listar():
       print(cliente)
 
   @classmethod
@@ -156,13 +156,6 @@ class UI:
     hinicio = input("Horário início HH:MM: ")
     hfim = input("Horário fim HH:MM: ")
     intervalo = int(input("Intervalo (min): "))
-    data_inicio = datetime.datetime.strptime(f"{data} {hinicio}", "%d/%m/%Y %H:%M")
-    data_fim = datetime.datetime.strptime(f"{data} {hfim}", "%d/%m/%Y %H:%M")
-    delta = datetime.timedelta(minutes=intervalo)
-    aux = data_inicio
-    while aux <= data_fim:
-      NAgenda.inserir(Agenda(0, aux, False, 0, 0))
-      aux = aux + delta
-
+    Views.agenda_abrir_agenda_do_dia(data, hinicio, hfim, intervalo)
 
 UI.Main()
